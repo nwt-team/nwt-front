@@ -1,5 +1,5 @@
 <mat-card>
-  <img mat-card-image src="assets/default_album_art.png">
-  <mat-card-title>Whole Lotta Love</mat-card-title>
-  <mat-card-subtitle>Artiste : Led Zeppelin</mat-card-subtitle>
+  <img mat-card-image src="{{!!music.cover? music.cover : 'assets/default_album_art.png'}}">
+  <mat-card-title>{{music.title}}</mat-card-title>
+  <mat-card-subtitle>Artiste : {{music.artist}}</mat-card-subtitle>
 </mat-card>

@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
-import {Observable} from "rxjs";
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
+import {Observable} from 'rxjs';
+import {Music} from '../interfaces/music';
+import {defaultIfEmpty, filter} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +25,12 @@ export class MusicService {
     Object.keys(environment.backend.endpoints).forEach(k => this._backendURL[ k ] = `${baseUrl}${environment.backend.endpoints[ k ]}`);
   }
 
-
+  getAll(): Observable<Music[]> {
+    return this._http.get<Music[]>(this._backendURL.allMusics)
+      .pipe(
+        filter(_ => !!_),
+        defaultIfEmpty([])
+      );
+  }
 
 }

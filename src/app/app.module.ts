@@ -16,6 +16,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { MusicCardComponent } from './shared/music-card/music-card.component';
 import { MusicComponent } from './music/music.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MusicsComponent } from './musics/musics.component';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { MusicComponent } from './music/music.component';
     SearchBarComponent,
     MusicCardComponent,
     MusicComponent,
+    MusicsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { MusicComponent } from './music/music.component';
     MatCardModule,
     MatSelectModule,
     MatInputModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
