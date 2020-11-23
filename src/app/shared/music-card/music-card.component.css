@@ -1,0 +1,6 @@
+mat-card {
+  max-height: 30em;
+  max-width: 15em;
+  margin: 3.4em;
+  display: inline-block;
+}

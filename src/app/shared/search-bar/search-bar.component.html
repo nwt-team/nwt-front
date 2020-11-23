@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>
+    Rechercher une musique
+  </mat-card-title>
+  <div class="search-input-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Insérer recherche</mat-label>
+      <input  matInput #input type="search" placeholder="Ex. Led Zeppelin">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>par</mat-label>
+      <mat-select>
+        <mat-option value="1">Titre de la musique</mat-option>
+        <mat-option value="2">Titre de l'album</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-card>
