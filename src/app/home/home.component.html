@@ -1,2 +1,2 @@
-<app-search-bar [inputTitle]="inputTitle" [inputAlbum]="inputAlbum"></app-search-bar>
-<app-musics [inputAlbum]="inputAlbum" [inputTitle]="inputTitle"></app-musics>
+<app-search-bar *ngIf="!isConnected" [inputTitle]="inputTitle" [inputAlbum]="inputAlbum"></app-search-bar>
+<app-musics *ngIf="!isConnected" [inputAlbum]="inputAlbum" [inputTitle]="inputTitle"></app-musics>

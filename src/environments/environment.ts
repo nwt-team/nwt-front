@@ -11,7 +11,8 @@ export const environment = {
     endpoints: {
       allMusics: '/music',
       musicByTitle: '/music/byTitle/:title',
-      musicByAlbum: '/music/byAlbum/:album'
+      musicByAlbum: '/music/byAlbum/:album',
+      createUser: '/user'
     }
   }
 };

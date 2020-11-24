@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nwt-front';
+
+  showInscriptionDialog: EventEmitter<void>;
+  showConnectionDialog: EventEmitter<void>;
+
+  constructor() {
+    this.showConnectionDialog = new EventEmitter<void>();
+    this.showInscriptionDialog = new EventEmitter<void>();
+  }
 }

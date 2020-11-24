@@ -5,7 +5,7 @@
   <div class="search-input-container">
     <mat-form-field appearance="fill">
       <mat-label>Insérer recherche</mat-label>
-      <input matInput type="search" placeholder="Ex. Led Zeppelin" [(ngModel)]="search" (keyup)="inputChange()">
+      <input matInput type="search" placeholder="Ex. Led Zeppelin" [(ngModel)]="search" (change)="inputChange()">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -14,5 +14,7 @@
        <mat-option (onSelectionChange)="optionChange(item.id, $event)"  *ngFor="let item of selected" [value]="item.id">{{item.value}}</mat-option>
       </mat-select>
     </mat-form-field>
+
+    <button mat-raised-button (click)="inputChange()" class="search-button" type="submit" color="primary">Rechercher</button>
   </div>
 </mat-card>
