@@ -33,4 +33,20 @@ export class MusicService {
       );
   }
 
+  getByTitle(title: string): Observable<Music[]> {
+    return this._http.get<Music[]>(this._backendURL.musicByTitle.replace(':title', title))
+      .pipe(
+        filter(_ => !!_),
+        defaultIfEmpty([])
+      );
+  }
+
+  getByAlbum(album: string): Observable<Music[]> {
+    return this._http.get<Music[]>(this._backendURL.musicByAlbum.replace(':album', album))
+      .pipe(
+        filter(_ => !!_),
+        defaultIfEmpty([])
+      );
+  }
+
 }

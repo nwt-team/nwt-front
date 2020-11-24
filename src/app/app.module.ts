@@ -18,6 +18,7 @@ import { MusicCardComponent } from './shared/music-card/music-card.component';
 import { MusicComponent } from './music/music.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MusicsComponent } from './musics/musics.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { MusicsComponent } from './musics/musics.component';
     MatSelectModule,
     MatInputModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

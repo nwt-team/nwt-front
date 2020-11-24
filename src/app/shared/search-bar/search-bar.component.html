@@ -5,14 +5,13 @@
   <div class="search-input-container">
     <mat-form-field appearance="fill">
       <mat-label>Insérer recherche</mat-label>
-      <input  matInput #input type="search" placeholder="Ex. Led Zeppelin">
+      <input matInput type="search" placeholder="Ex. Led Zeppelin" [(ngModel)]="search" (keyup)="inputChange()">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>par</mat-label>
-      <mat-select>
-        <mat-option value="1">Titre de la musique</mat-option>
-        <mat-option value="2">Titre de l'album</mat-option>
+      <mat-select [value]="selectedValue">
+       <mat-option (onSelectionChange)="optionChange(item.id, $event)"  *ngFor="let item of selected" [value]="item.id">{{item.value}}</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
