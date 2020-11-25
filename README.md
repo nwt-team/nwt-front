@@ -2,6 +2,10 @@
 
 This project use [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
+A music organizer to organize and share musics. 
+
+Back-end of this project [MusicOrganizer Back-end](https://github.com/nwt-team/nwt-front)
+
 ## Dependencies
 
 This project needs NodeJS 12.18.4+ to run.
