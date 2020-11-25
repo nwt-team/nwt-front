@@ -2,6 +2,12 @@
 
 This project use [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
+## Dependencies
+
+This project needs NodeJS 12.18.4+ to run.
+You can install yarn to install dependencies.
+The command ```yarn install``` will install them.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
