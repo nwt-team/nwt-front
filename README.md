@@ -1,6 +1,6 @@
 # MusicOrganizer
 
-This project was generated use [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+This project use [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
 ## Development server
 
