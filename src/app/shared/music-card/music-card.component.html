@@ -1,5 +1,16 @@
 <mat-card>
   <img mat-card-image src="{{!!music.cover? music.cover : 'assets/default_album_art.png'}}">
   <mat-card-title>{{music.title}}</mat-card-title>
-  <mat-card-subtitle>Artiste : {{music.artist}}</mat-card-subtitle>
+
+  <mat-card-content>
+    <span>Artiste : {{music.artist}}</span><br>
+    <span *ngIf="!!music.album">Album : {{music.album}}</span><br>
+  </mat-card-content>
+
+  <mat-card-subtitle>
+    <span>Année : {{music.year}}</span><br>
+    <span>Genre : {{music.genre}}</span><br>
+    <span>Type : {{music.type}}</span><br>
+  </mat-card-subtitle>
+
 </mat-card>
