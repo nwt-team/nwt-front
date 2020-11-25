@@ -3,13 +3,13 @@
   <mat-card-title>{{music.title}}</mat-card-title>
 
   <mat-card-content>
-    <span>Artiste : {{music.artist}}</span><br>
+    <span>{{(music.artist.includes(',') || music.artist.includes('/')) ? "Artistes" : "Artiste"}} : {{music.artist}}</span><br>
     <span *ngIf="!!music.album">Album : {{music.album}}</span><br>
   </mat-card-content>
 
   <mat-card-subtitle>
     <span>Année : {{music.year}}</span><br>
-    <span>Genre : {{music.genre}}</span><br>
+    <span>{{(music.genre.includes(',') || music.genre.includes('/')) ? "Genres" : "Genre"}} : {{music.genre}}</span><br>
     <span>Type : {{music.type}}</span><br>
   </mat-card-subtitle>
 
